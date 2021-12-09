@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kwotes",
+  "info": {
+    "singularName": "kwote",
+    "pluralName": "kwotes",
+    "displayName": "Kwote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "kwotes"
+    }
+  }
+}
