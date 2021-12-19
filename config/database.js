@@ -1,23 +1,3 @@
-// module.exports = ({ env }) => ({
-//   defaultConnection: "default",
-//   connections: {
-//     default: {
-//       connector: "bookshelf",
-//       settings: {
-//         client: "postgres",
-//         host: env("DATABASE_HOST", "localhost"),
-//         port: env.int("DATABASE_PORT", 5432),
-//         database: env("DATABASE_NAME", "kwote"),
-//         username: env("DATABASE_USERNAME", "roula"),
-//         password: env("DATABASE_PASSWORD", "password"),
-//         schema: env("DATABASE_SCHEMA", "public"),
-//       },
-//       options: {},
-//     },
-//   },
-// });
-
-
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
