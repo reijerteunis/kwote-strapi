@@ -53,6 +53,22 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "kwotes"
+    },
+    "imported_author": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "imported_category": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }
