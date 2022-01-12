@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "owr_topics",
+  "info": {
+    "singularName": "owr-topic",
+    "pluralName": "owr-topics",
+    "displayName": "OWR Topic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "unique": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::owr-category.owr-category",
+      "inversedBy": "topics"
+    }
+  }
+}
