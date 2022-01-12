@@ -30,6 +30,24 @@
       "relation": "manyToMany",
       "target": "api::owr-category.owr-category",
       "inversedBy": "topics"
+    },
+    "Answers": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "owr-questions.answer"
+    },
+    "Question": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }

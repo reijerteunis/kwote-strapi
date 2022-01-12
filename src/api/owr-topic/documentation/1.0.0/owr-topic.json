@@ -76,6 +76,26 @@
                                                               }
                                                             }
                                                           },
+                                                          "Answers": {
+                                                            "type": "array",
+                                                            "items": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "advice": {
+                                                                  "type": "string"
+                                                                },
+                                                                "explanation": {
+                                                                  "type": "string"
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "Question": {
+                                                            "type": "string"
+                                                          },
                                                           "createdAt": {
                                                             "type": "string",
                                                             "format": "date-time"
@@ -478,6 +498,26 @@
                                     }
                                   }
                                 }
+                              },
+                              "Answers": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "advice": {
+                                      "type": "string"
+                                    },
+                                    "explanation": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "Question": {
+                                "type": "string"
                               },
                               "createdAt": {
                                 "type": "string",
@@ -887,6 +927,26 @@
                                                             }
                                                           }
                                                         },
+                                                        "Answers": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "string"
+                                                              },
+                                                              "advice": {
+                                                                "type": "string"
+                                                              },
+                                                              "explanation": {
+                                                                "type": "string"
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "Question": {
+                                                          "type": "string"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -1289,6 +1349,26 @@
                                   }
                                 }
                               }
+                            },
+                            "Answers": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "advice": {
+                                    "type": "string"
+                                  },
+                                  "explanation": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "Question": {
+                              "type": "string"
                             },
                             "createdAt": {
                               "type": "string",
@@ -1547,6 +1627,23 @@
                           "example": "string or id"
                         }
                       },
+                      "Answers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "advice": {
+                              "type": "string"
+                            },
+                            "explanation": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Question": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -1680,6 +1777,26 @@
                                                               }
                                                             }
                                                           }
+                                                        },
+                                                        "Answers": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "string"
+                                                              },
+                                                              "advice": {
+                                                                "type": "string"
+                                                              },
+                                                              "explanation": {
+                                                                "type": "string"
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "Question": {
+                                                          "type": "string"
                                                         },
                                                         "createdAt": {
                                                           "type": "string",
@@ -2083,6 +2200,26 @@
                                   }
                                 }
                               }
+                            },
+                            "Answers": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "advice": {
+                                    "type": "string"
+                                  },
+                                  "explanation": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "Question": {
+                              "type": "string"
                             },
                             "createdAt": {
                               "type": "string",
@@ -2401,6 +2538,26 @@
                                                             }
                                                           }
                                                         },
+                                                        "Answers": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "string"
+                                                              },
+                                                              "advice": {
+                                                                "type": "string"
+                                                              },
+                                                              "explanation": {
+                                                                "type": "string"
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "Question": {
+                                                          "type": "string"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -2804,6 +2961,26 @@
                                 }
                               }
                             },
+                            "Answers": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "advice": {
+                                    "type": "string"
+                                  },
+                                  "explanation": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "Question": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -3071,6 +3248,23 @@
                           ],
                           "example": "string or id"
                         }
+                      },
+                      "Answers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "advice": {
+                              "type": "string"
+                            },
+                            "explanation": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Question": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -3381,6 +3575,26 @@
                                                             }
                                                           }
                                                         },
+                                                        "Answers": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "id": {
+                                                                "type": "string"
+                                                              },
+                                                              "advice": {
+                                                                "type": "string"
+                                                              },
+                                                              "explanation": {
+                                                                "type": "string"
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "Question": {
+                                                          "type": "string"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -3784,6 +3998,26 @@
                                 }
                               }
                             },
+                            "Answers": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "advice": {
+                                    "type": "string"
+                                  },
+                                  "explanation": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "Question": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -4051,6 +4285,23 @@
                           ],
                           "example": "string or id"
                         }
+                      },
+                      "Answers": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "advice": {
+                              "type": "string"
+                            },
+                            "explanation": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "Question": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",

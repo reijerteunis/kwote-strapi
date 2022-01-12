@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_owr_questions_answers",
+  "info": {
+    "displayName": "Answer",
+    "icon": "reply",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "advice": {
+      "type": "string",
+      "unique": true
+    },
+    "explanation": {
+      "type": "richtext"
+    }
+  }
+}

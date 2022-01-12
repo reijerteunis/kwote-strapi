@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::owr-topic.owr-topic",
-      "inversedBy": "category"
+      "mappedBy": "category"
     }
   }
 }

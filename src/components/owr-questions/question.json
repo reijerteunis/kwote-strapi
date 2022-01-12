@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_owr_questions_questions",
+  "info": {
+    "displayName": "Question",
+    "icon": "question-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "text",
+      "unique": true
+    },
+    "Answer": {
+      "displayName": "Answer",
+      "type": "component",
+      "repeatable": true,
+      "component": "owr-questions.answer"
+    }
+  }
+}
