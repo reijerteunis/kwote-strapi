@@ -612,6 +612,9 @@
                                                         "imported_category": {
                                                           "type": "string"
                                                         },
+                                                        "Blocked": {
+                                                          "type": "boolean"
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -788,6 +791,9 @@
                               },
                               "imported_category": {
                                 "type": "string"
+                              },
+                              "Blocked": {
+                                "type": "boolean"
                               },
                               "createdAt": {
                                 "type": "string",
@@ -1733,6 +1739,9 @@
                                                       "imported_category": {
                                                         "type": "string"
                                                       },
+                                                      "Blocked": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -1909,6 +1918,9 @@
                             },
                             "imported_category": {
                               "type": "string"
+                            },
+                            "Blocked": {
+                              "type": "boolean"
                             },
                             "createdAt": {
                               "type": "string",
@@ -2775,6 +2787,9 @@
                                                       "imported_category": {
                                                         "type": "string"
                                                       },
+                                                      "Blocked": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -2951,6 +2966,9 @@
                             },
                             "imported_category": {
                               "type": "string"
+                            },
+                            "Blocked": {
+                              "type": "boolean"
                             },
                             "createdAt": {
                               "type": "string",
@@ -3805,6 +3823,9 @@
                                                       "imported_category": {
                                                         "type": "string"
                                                       },
+                                                      "Blocked": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -3981,6 +4002,9 @@
                             },
                             "imported_category": {
                               "type": "string"
+                            },
+                            "Blocked": {
+                              "type": "boolean"
                             },
                             "createdAt": {
                               "type": "string",
@@ -4283,6 +4307,9 @@
                       },
                       "imported_category": {
                         "type": "string"
+                      },
+                      "Blocked": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
@@ -5129,6 +5156,9 @@
                                                       "imported_category": {
                                                         "type": "string"
                                                       },
+                                                      "Blocked": {
+                                                        "type": "boolean"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -5305,6 +5335,9 @@
                             },
                             "imported_category": {
                               "type": "string"
+                            },
+                            "Blocked": {
+                              "type": "boolean"
                             },
                             "createdAt": {
                               "type": "string",
