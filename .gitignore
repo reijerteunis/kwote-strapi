@@ -112,3 +112,6 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+config/database.js
+src/extensions/documentation/documentation/1.0.0/full_documentation.json
