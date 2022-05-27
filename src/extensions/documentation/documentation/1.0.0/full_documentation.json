@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-05-21T13:34:22.855Z"
+    "x-generation-date": "2022-05-27T11:55:24.401Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -63,7 +63,8 @@
                 "type": "object"
               },
               {
-                "type": "array"
+                "type": "array",
+                "items": []
               }
             ]
           },
@@ -88,12 +89,32 @@
       },
       "AuthorRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "name"
+            ],
             "type": "object",
             "properties": {
               "name": {
                 "type": "string"
+              },
+              "kwotes": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
               }
             }
           }
@@ -1631,6 +1652,11 @@
         }
       },
       "CategoryLocalizationRequest": {
+        "required": [
+          "title",
+          "sort",
+          "locale"
+        ],
         "type": "object",
         "properties": {
           "title": {
@@ -1638,13 +1664,51 @@
           },
           "sort": {
             "type": "integer"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "kwotes": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "locale": {
+            "type": "string"
           }
         }
       },
       "CategoryRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "sort"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -1652,6 +1716,37 @@
               },
               "sort": {
                 "type": "integer"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "kwotes": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -4030,27 +4125,141 @@
         }
       },
       "KwoteLocalizationRequest": {
+        "required": [
+          "title",
+          "favorite",
+          "locale"
+        ],
         "type": "object",
         "properties": {
           "title": {
             "type": "string"
           },
+          "author": {
+            "oneOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "example": "string or id"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
           "favorite": {
             "type": "integer"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "imported_author": {
+            "type": "string"
+          },
+          "imported_category": {
+            "type": "string"
+          },
+          "Blocked": {
+            "type": "boolean"
+          },
+          "locale": {
+            "type": "string"
           }
         }
       },
       "KwoteRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "favorite"
+            ],
             "type": "object",
             "properties": {
               "title": {
                 "type": "string"
               },
+              "author": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
               "favorite": {
                 "type": "integer"
+              },
+              "categories": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "imported_author": {
+                "type": "string"
+              },
+              "imported_category": {
+                "type": "string"
+              },
+              "Blocked": {
+                "type": "boolean"
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -6507,6 +6716,9 @@
         }
       },
       "OwrCategoryLocalizationRequest": {
+        "required": [
+          "locale"
+        ],
         "type": "object",
         "properties": {
           "name": {
@@ -6533,8 +6745,12 @@
       },
       "OwrCategoryRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [],
             "type": "object",
             "properties": {
               "name": {
@@ -8163,6 +8379,9 @@
         }
       },
       "OwrTopicLocalizationRequest": {
+        "required": [
+          "locale"
+        ],
         "type": "object",
         "properties": {
           "title": {
@@ -8206,8 +8425,12 @@
       },
       "OwrTopicRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [],
             "type": "object",
             "properties": {
               "title": {
@@ -9913,10 +10136,34 @@
         }
       },
       "TagLocalizationRequest": {
+        "required": [
+          "title",
+          "sort",
+          "isPremium",
+          "isFeatured",
+          "locale"
+        ],
         "type": "object",
         "properties": {
           "title": {
             "type": "string"
+          },
+          "subTitle": {
+            "type": "string"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
           },
           "sort": {
             "type": "integer"
@@ -9926,17 +10173,60 @@
           },
           "isFeatured": {
             "type": "boolean"
+          },
+          "kwotes": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "example": "string or id"
+            }
+          },
+          "locale": {
+            "type": "string"
           }
         }
       },
       "TagRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "sort",
+              "isPremium",
+              "isFeatured"
+            ],
             "type": "object",
             "properties": {
               "title": {
                 "type": "string"
+              },
+              "subTitle": {
+                "type": "string"
+              },
+              "categories": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
               },
               "sort": {
                 "type": "integer"
@@ -9946,6 +10236,23 @@
               },
               "isFeatured": {
                 "type": "boolean"
+              },
+              "kwotes": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "locale": {
+                "type": "string"
               }
             }
           }
@@ -12352,14 +12659,41 @@
       },
       "UploadFileRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
             "type": "object",
             "properties": {
               "name": {
                 "type": "string"
               },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {},
               "hash": {
+                "type": "string"
+              },
+              "ext": {
                 "type": "string"
               },
               "mime": {
@@ -12372,8 +12706,26 @@
               "url": {
                 "type": "string"
               },
+              "previewUrl": {
+                "type": "string"
+              },
               "provider": {
                 "type": "string"
+              },
+              "provider_metadata": {},
+              "related": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
               }
             }
           }
@@ -13148,12 +13500,29 @@
       },
       "UsersPermissionsPermissionRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "action"
+            ],
             "type": "object",
             "properties": {
               "action": {
                 "type": "string"
+              },
+              "role": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
               }
             }
           }
@@ -14324,12 +14693,52 @@
       },
       "UsersPermissionsRoleRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "name"
+            ],
             "type": "object",
             "properties": {
               "name": {
                 "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
               }
             }
           }
@@ -15558,8 +15967,15 @@
       },
       "UsersPermissionsUserRequest": {
         "type": "object",
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
+            "required": [
+              "username",
+              "email"
+            ],
             "type": "object",
             "properties": {
               "username": {
@@ -15568,6 +15984,37 @@
               "email": {
                 "type": "string",
                 "format": "email"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string",
+                "format": "password",
+                "example": "*******"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
               }
             }
           }
