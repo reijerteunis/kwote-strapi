@@ -60,7 +60,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "imported_category": {
       "pluginOptions": {
@@ -68,7 +69,8 @@
           "localized": true
         }
       },
-      "type": "text"
+      "type": "text",
+      "private": true
     },
     "Blocked": {
       "pluginOptions": {
@@ -79,6 +81,21 @@
       "type": "boolean",
       "default": false,
       "required": false
+    },
+    "reason_for_blocking": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Too long",
+        "Do not understand",
+        "Unrelated topic",
+        "Other"
+      ],
+      "private": true
     }
   }
 }
