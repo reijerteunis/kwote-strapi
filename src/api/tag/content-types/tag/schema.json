@@ -75,6 +75,14 @@
       "relation": "manyToMany",
       "target": "api::kwote.kwote",
       "mappedBy": "tags"
+    },
+    "image": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }
